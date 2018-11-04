@@ -3026,8 +3026,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 261655582}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000056624407}
-  m_LocalPosition: {x: -44.583565, y: 27.3, z: -24.597353}
-  m_LocalScale: {x: 7, y: 5.0181127, z: 1}
+  m_LocalPosition: {x: -43.08, y: 27.3, z: -24.6}
+  m_LocalScale: {x: 4.2000003, y: 5.0181127, z: 1}
   m_Children: []
   m_Father: {fileID: 875022209}
   m_RootOrder: 6
@@ -4842,7 +4842,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 437247789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.615771, y: 1.1636719, z: -2.679768}
+  m_LocalPosition: {x: 18.32, y: 1.1636719, z: 6.29}
   m_LocalScale: {x: 0.7, y: 1, z: 0.7}
   m_Children: []
   m_Father: {fileID: 1211074607}
@@ -6284,7 +6284,8 @@ GameObject:
   - component: {fileID: 559903136}
   - component: {fileID: 559903135}
   - component: {fileID: 559903134}
-  m_Layer: 0
+  - component: {fileID: 559903138}
+  m_Layer: 13
   m_Name: SpawnPoint (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6352,12 +6353,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 559903133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.7310553, y: 0.50372744, z: -22.384884}
+  m_LocalPosition: {x: -4.7310553, y: 0.5, z: -22.384886}
   m_LocalScale: {x: 3.05, y: 1, z: 2.7}
   m_Children: []
   m_Father: {fileID: 1764545340}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &559903138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559903133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a2a2578f1224d45a7289f66b225a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsActive: 0
+  CanSpawnZombie: 0
+  TheZombie: {fileID: 437247789}
+  SpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &567696411
 GameObject:
   m_ObjectHideFlags: 0
@@ -7277,7 +7293,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 3ae60be9a1d102746910c2efd0034a30, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 3ae60be9a1d102746910c2efd0034a30, type: 3}
       propertyPath: m_LocalScale.x
@@ -12709,7 +12725,6 @@ Transform:
   - {fileID: 1832648786}
   - {fileID: 1851065362}
   - {fileID: 348240848}
-  - {fileID: 1764545340}
   - {fileID: 1568038468}
   - {fileID: 1506840778}
   - {fileID: 616503586}
@@ -13198,7 +13213,8 @@ GameObject:
   - component: {fileID: 789838597}
   - component: {fileID: 789838596}
   - component: {fileID: 789838595}
-  m_Layer: 0
+  - component: {fileID: 789838599}
+  m_Layer: 13
   m_Name: SpawnPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13266,12 +13282,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789838594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6289446, y: 0.50372744, z: 3.9151144}
+  m_LocalPosition: {x: 1.6289446, y: 0.5, z: 3.9151144}
   m_LocalScale: {x: 3.05, y: 1, z: 2.7}
   m_Children: []
   m_Father: {fileID: 1764545340}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &789838599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789838594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a2a2578f1224d45a7289f66b225a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsActive: 0
+  CanSpawnZombie: 0
+  TheZombie: {fileID: 437247789}
+  SpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &798330762
 GameObject:
   m_ObjectHideFlags: 0
@@ -13676,7 +13707,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 829435005}
   m_LocalRotation: {x: -0, y: 0.9708875, z: -0, w: -0.2395362}
-  m_LocalPosition: {x: -75.46, y: 25.9, z: -25.63}
+  m_LocalPosition: {x: -77.55, y: 25.9, z: -29.61}
   m_LocalScale: {x: 4.1030293, y: 0.99533, z: 0.5000001}
   m_Children: []
   m_Father: {fileID: 875022209}
@@ -14948,7 +14979,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5112e6444b23577429168ceb76476ae4, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5112e6444b23577429168ceb76476ae4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -16267,7 +16298,8 @@ GameObject:
   - component: {fileID: 1065160234}
   - component: {fileID: 1065160233}
   - component: {fileID: 1065160232}
-  m_Layer: 0
+  - component: {fileID: 1065160236}
+  m_Layer: 13
   m_Name: SpawnPoint (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16335,12 +16367,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1065160231}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -47.951057, y: 0.50372744, z: -19.404884}
+  m_LocalPosition: {x: -47.951057, y: 0.5, z: -19.404886}
   m_LocalScale: {x: 3.05, y: 1, z: 2.7}
   m_Children: []
   m_Father: {fileID: 1764545340}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1065160236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065160231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a2a2578f1224d45a7289f66b225a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsActive: 0
+  CanSpawnZombie: 0
+  TheZombie: {fileID: 437247789}
+  SpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1074167493
 GameObject:
   m_ObjectHideFlags: 0
@@ -16905,6 +16952,93 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1099901652}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1101569659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101569660}
+  - component: {fileID: 1101569663}
+  - component: {fileID: 1101569662}
+  - component: {fileID: 1101569661}
+  m_Layer: 0
+  m_Name: ZombieSpawnRadius
+  m_TagString: ZombieSpawnRadius
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1101569660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1101569659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 50, y: 4, z: 50}
+  m_Children: []
+  m_Father: {fileID: 262915240}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1101569661
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1101569659}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1101569662
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1101569659}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1101569663
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1101569659}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1122289827
 GameObject:
   m_ObjectHideFlags: 0
@@ -16935,6 +17069,8 @@ MonoBehaviour:
   RoundCounter: {fileID: 1225008646}
   globalZombie: {fileID: 1148204538}
   CurrentRound: 0
+  CurrentZombiesAlive: 0
+  ZombiesPerRound: 0
 --- !u!4 &1122289829
 Transform:
   m_ObjectHideFlags: 0
@@ -17985,6 +18121,7 @@ Transform:
   m_Children:
   - {fileID: 437247795}
   - {fileID: 1148204539}
+  - {fileID: 1764545340}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19373,7 +19510,8 @@ GameObject:
   - component: {fileID: 1375701115}
   - component: {fileID: 1375701114}
   - component: {fileID: 1375701113}
-  m_Layer: 0
+  - component: {fileID: 1375701117}
+  m_Layer: 13
   m_Name: SpawnPoint (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19441,12 +19579,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1375701112}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.7689447, y: 0.50372744, z: -24.384884}
+  m_LocalPosition: {x: 4.7689447, y: 0.5, z: -24.384886}
   m_LocalScale: {x: 3.05, y: 1, z: 2.7}
   m_Children: []
   m_Father: {fileID: 1764545340}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1375701117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1375701112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a2a2578f1224d45a7289f66b225a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsActive: 0
+  CanSpawnZombie: 0
+  TheZombie: {fileID: 437247789}
+  SpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1389366874
 GameObject:
   m_ObjectHideFlags: 0
@@ -19883,7 +20036,8 @@ GameObject:
   - component: {fileID: 1438595959}
   - component: {fileID: 1438595958}
   - component: {fileID: 1438595957}
-  m_Layer: 0
+  - component: {fileID: 1438595961}
+  m_Layer: 13
   m_Name: SpawnPoint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19951,12 +20105,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1438595956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.711056, y: 0.50372744, z: -22.384884}
+  m_LocalPosition: {x: -14.711057, y: 0.5, z: -22.384886}
   m_LocalScale: {x: 3.05, y: 1, z: 2.7}
   m_Children: []
   m_Father: {fileID: 1764545340}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1438595961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1438595956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a2a2578f1224d45a7289f66b225a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsActive: 0
+  CanSpawnZombie: 0
+  TheZombie: {fileID: 437247789}
+  SpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1440932317
 GameObject:
   m_ObjectHideFlags: 0
@@ -20892,7 +21061,7 @@ Transform:
   - {fileID: 1746037918}
   - {fileID: 702686854}
   m_Father: {fileID: 733823392}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1507731459
 GameObject:
@@ -25871,7 +26040,7 @@ Transform:
   - {fileID: 501113196}
   - {fileID: 1408399471}
   m_Father: {fileID: 733823392}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1568903063 stripped
 GameObject:
@@ -26347,7 +26516,8 @@ GameObject:
   - component: {fileID: 1624709125}
   - component: {fileID: 1624709124}
   - component: {fileID: 1624709123}
-  m_Layer: 0
+  - component: {fileID: 1624709127}
+  m_Layer: 13
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26415,12 +26585,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1624709122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.551055, y: 0.50372744, z: 4.692239}
-  m_LocalScale: {x: 3.05, y: 1, z: 2.7}
+  m_LocalPosition: {x: -6.42, y: 0.5, z: 4.29}
+  m_LocalScale: {x: 3.316875, y: 1, z: 3.6890101}
   m_Children: []
   m_Father: {fileID: 1764545340}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1624709127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1624709122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a2a2578f1224d45a7289f66b225a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsActive: 0
+  CanSpawnZombie: 0
+  TheZombie: {fileID: 437247789}
+  SpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1648605856
 GameObject:
   m_ObjectHideFlags: 0
@@ -27662,7 +27847,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1764545339}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.615771, y: 0.25994444, z: -2.679768}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1624709126}
@@ -27673,8 +27858,8 @@ Transform:
   - {fileID: 2104554721}
   - {fileID: 559903137}
   - {fileID: 1375701116}
-  m_Father: {fileID: 733823392}
-  m_RootOrder: 8
+  m_Father: {fileID: 1211074607}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1767159758
 GameObject:
@@ -29605,7 +29790,8 @@ GameObject:
   - component: {fileID: 1999050130}
   - component: {fileID: 1999050129}
   - component: {fileID: 1999050128}
-  m_Layer: 0
+  - component: {fileID: 1999050132}
+  m_Layer: 13
   m_Name: SpawnPoint (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29673,12 +29859,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1999050127}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -50.33106, y: 0.50372744, z: 10.845114}
+  m_LocalPosition: {x: -50.33106, y: 0.5, z: 10.845114}
   m_LocalScale: {x: 3.05, y: 1, z: 2.7}
   m_Children: []
   m_Father: {fileID: 1764545340}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1999050132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1999050127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a2a2578f1224d45a7289f66b225a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsActive: 0
+  CanSpawnZombie: 0
+  TheZombie: {fileID: 437247789}
+  SpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2001446411
 GameObject:
   m_ObjectHideFlags: 0
@@ -35068,7 +35269,7 @@ Transform:
   m_Children:
   - {fileID: 1894347384}
   m_Father: {fileID: 733823392}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2097586571
 GameObject:
@@ -35166,7 +35367,8 @@ GameObject:
   - component: {fileID: 2104554720}
   - component: {fileID: 2104554719}
   - component: {fileID: 2104554718}
-  m_Layer: 0
+  - component: {fileID: 2104554722}
+  m_Layer: 13
   m_Name: SpawnPoint (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35234,12 +35436,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2104554717}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.531055, y: 0.50372744, z: 22.965115}
+  m_LocalPosition: {x: -13.531056, y: 0.5, z: 22.965113}
   m_LocalScale: {x: 3.05, y: 1, z: 2.7}
   m_Children: []
   m_Father: {fileID: 1764545340}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2104554722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2104554717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a2a2578f1224d45a7289f66b225a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsActive: 0
+  CanSpawnZombie: 0
+  TheZombie: {fileID: 437247789}
+  SpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2108275324
 GameObject:
   m_ObjectHideFlags: 0
