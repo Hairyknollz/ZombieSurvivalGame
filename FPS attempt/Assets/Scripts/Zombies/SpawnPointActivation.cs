@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnPointActivation : MonoBehaviour {
 
-    public GlobalRounds globalRounds;
+    //public GlobalRounds globalRounds;
 
     public bool IsActive;
     public bool CanSpawnZombie;
@@ -45,13 +45,13 @@ public class SpawnPointActivation : MonoBehaviour {
         CanSpawnZombie = false;
         SpawnPosition = new Vector3(this.transform.position.x, 0, this.transform.position.z);
         Instantiate(TheZombie, SpawnPosition, Quaternion.identity);
-        globalRounds.CurrentZombiesAlive += 1;
+        //globalRounds.CurrentZombiesAlive += 1;
         StartCoroutine(StartSpawnCooldown());
     }
 
     IEnumerator StartSpawnCooldown ()
     {
-        yield return new WaitForSeconds(12);
+        yield return new WaitForSeconds(3);
         CanSpawnZombie = true;
     }
 }

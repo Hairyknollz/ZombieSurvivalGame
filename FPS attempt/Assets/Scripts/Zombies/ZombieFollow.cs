@@ -82,7 +82,7 @@ public class ZombieFollow : MonoBehaviour {
             PainSound = Random.Range(1, 4);
             yield return new WaitForSeconds(0.9f);
             ScreenFlash.SetActive(true);
-            GlobalHealth.PlayerHealth -= 20;
+            HealthMonitor.PlayerHealth -= 20;
             if (PainSound == 1)
             {
                 Hurt001.Play();

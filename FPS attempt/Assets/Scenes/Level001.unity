@@ -1256,7 +1256,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 138858241}
-  - component: {fileID: 138858240}
   - component: {fileID: 138858242}
   m_Layer: 0
   m_Name: GlobalHealth
@@ -1265,17 +1264,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &138858240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 138858239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aaae6f8be4867a49ac37c91ccdffae1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &138858241
 Transform:
   m_ObjectHideFlags: 0
@@ -1297,7 +1285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 138858239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bdf8c9953f18c047b3398375edde4f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 764eb3688563e1b4188951bf305fc91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Health001: {fileID: 182032197}
@@ -1308,7 +1296,6 @@ MonoBehaviour:
   ArmourPip001: {fileID: 1813253133}
   ArmourPip002: {fileID: 870549969}
   ArmourPip003: {fileID: 1562211819}
-  CurrentHealth: 0
   CurrentArmour: 0
   ArmourDisplay: {fileID: 269061918}
   StalwartActive: 0
@@ -1418,7 +1405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &153262019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1512,6 +1499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb480ce0cabce54d8a20c64e7a1c8f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextDisplay: {fileID: 1890015754}
+  TheDistance: 0
 --- !u!1 &160074476
 GameObject:
   m_ObjectHideFlags: 0
@@ -12653,7 +12642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &702686852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12677,6 +12666,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35234bf7e689b92419877b9987e954b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextDisplay: {fileID: 1890015754}
+  TheDoorLeft: {fileID: 1667851598}
+  TheDoorRight: {fileID: 1167054125}
+  TheDistance: 0
 --- !u!4 &702686854
 Transform:
   m_ObjectHideFlags: 0
@@ -17070,7 +17063,9 @@ MonoBehaviour:
   globalZombie: {fileID: 1148204538}
   CurrentRound: 0
   CurrentZombiesAlive: 0
+  MaxZombiesAtOnce: 0
   ZombiesPerRound: 0
+  KillsToNextRound: 0
 --- !u!4 &1122289829
 Transform:
   m_ObjectHideFlags: 0
@@ -27615,7 +27610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1746037917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27627,6 +27622,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35234bf7e689b92419877b9987e954b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextDisplay: {fileID: 1890015754}
+  TheDoorLeft: {fileID: 511753136}
+  TheDoorRight: {fileID: 379205915}
+  TheDistance: 0
 --- !u!4 &1746037918
 Transform:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverFadeOut : MonoBehaviour {
+public class GameOverFadeToMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
