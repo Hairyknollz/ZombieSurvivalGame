@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class ZombieHealth : MonoBehaviour
 {
-    public GlobalZombie globalZombie;
+    public GlobalRounds globalRounds;
 
     public int CurrentHealth;
     public GameObject TheZombie;
@@ -32,18 +32,19 @@ public class ZombieHealth : MonoBehaviour
             agent.GetComponent<NavMeshAgent>().speed = 0;
             //TheZombie.GetComponent<Animation>().Play("Dying");
             TheZombie.GetComponent<CapsuleCollider>().enabled = false;
-            StartCoroutine(EndZombie());
+            GlobalScore.CurrentScore += 60;
+            globalRounds.CurrentZombiesAlive -= 1;
+            globalRounds.ZombiesKilled += 1;
+            Destroy(gameObject);
+            //StartCoroutine(EndZombie());
 
         }
     }
 
-    IEnumerator EndZombie()
-    {
-        yield return new WaitForSeconds(3);
-        GlobalScore.CurrentScore += 60;
-        globalZombie.ZombieCount -= 1;
-        globalZombie.RoundLimit -= 1;
-        Destroy(gameObject);
-    }
+    //IEnumerator EndZombie()
+    //{
+    //    yield return new WaitForSeconds(3);
+        
+    //}
 
 }

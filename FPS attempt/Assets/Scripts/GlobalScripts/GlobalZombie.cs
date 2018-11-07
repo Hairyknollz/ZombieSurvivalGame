@@ -13,11 +13,7 @@ public class ZombieSpawning : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //ZombiesPerRound = 9;
         MaxZombies = 0;
-        //PlaceX = Random.Range(-25, 25);
-        //PlaceY = Random.Range(-25, 25);
-        //TheZombie.transform.position = new Vector3(PlaceX, 0, PlaceY);
     }
 	
 	// Update is called once per frame

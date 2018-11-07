@@ -15,8 +15,8 @@ public class GlobalZombie : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        RoundLimit = 9;
-        ZombieCount = 0;
+        //RoundLimit = 9;
+        //ZombieCount = 0;
 
         PlaceX = Random.Range(-25, 25);
         PlaceY = Random.Range(-25, 25);

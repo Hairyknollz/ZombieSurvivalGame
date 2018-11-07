@@ -66,25 +66,25 @@ public class GlobalADS : MonoBehaviour {
     IEnumerator StartM9ADS ()
     {
         M9.GetComponent<Animation>().Play("M9ADSAnim");
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.4f);
         M9.GetComponent<Animation>().Stop("M9ADSAnim");
     }
     IEnumerator EndM9ADS()
     {
         M9.GetComponent<Animation>().Play("M9ADSStopAnim");
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.4f);
         M9.GetComponent<Animation>().Stop("M9ADSStopAnim");
     }
     IEnumerator StartMP5KADS()
     {
         MP5K.GetComponent<Animation>().Play("MP5KADSAnim");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.4f);
         MP5K.GetComponent<Animation>().Stop("MP5KADSAnim");
     }
     IEnumerator EndMP5KADS()
     {
         MP5K.GetComponent<Animation>().Play("MP5KADSStopAnim");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.4f);
         MP5K.GetComponent<Animation>().Stop("MP5KADSStopAnim");
     }
     IEnumerator StartUMP45ADS()

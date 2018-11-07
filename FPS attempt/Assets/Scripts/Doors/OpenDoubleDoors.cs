@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OpenDoor002 : MonoBehaviour
+public class OpenDoubleDoors : MonoBehaviour
 {
     public GameObject TextDisplay;
     public GameObject TheDoorLeft;

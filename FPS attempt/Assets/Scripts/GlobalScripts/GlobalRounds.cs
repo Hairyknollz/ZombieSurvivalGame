@@ -10,28 +10,39 @@ public class GlobalRounds : MonoBehaviour {
     public int CurrentRound;
     public int CurrentZombiesAlive;
     public int MaxZombiesAtOnce;
-    public double ZombiesPerRound;
-    public double KillsToNextRound;
+    public double ZombiesThisRound;
+    public int ZombiesKilled;
+    public bool SpawnPointsActive;
 
 
     // Use this for initialization
     void Start () {
-        CurrentRound = 1;
-        ZombiesPerRound = 10 * 1.2;
-        CurrentZombiesAlive = 0;
         MaxZombiesAtOnce = 50;
-        KillsToNextRound = ZombiesPerRound;
-        //globalZombie.RoundLimit = 0;
+        CurrentRound = 1;
+        ZombiesThisRound = 10;
+        SpawnPointsActive = false;
+        StartNextRound();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (KillsToNextRound == 0)
+        if (CurrentZombiesAlive != MaxZombiesAtOnce && CurrentZombiesAlive != ZombiesThisRound)
+        {
+            SpawnPointsActive = true;
+        }
+        else
+        {
+            SpawnPointsActive = false;
+        }
+        if (ZombiesKilled == ZombiesThisRound)
         {
             CurrentRound += 1;
+            ZombiesThisRound = ZombiesThisRound + 8;
+            ZombiesKilled = 0;
             RoundCounter.GetComponent<Text>().text = "" + CurrentRound;
-            StartNextRound();
+            //StartNextRound();
         }
+        
 
         //if (CurrentZombiesAlive <= ZombiesPerRound)
         //{
@@ -43,7 +54,7 @@ public class GlobalRounds : MonoBehaviour {
 
     void StartNextRound()
     {
-
+        
     }
 
     //IEnumerator PlayAnim ()
