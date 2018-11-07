@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class HealthMonitor : MonoBehaviour {
 
@@ -13,7 +12,7 @@ public class HealthMonitor : MonoBehaviour {
     public GameObject ArmourPip001;
     public GameObject ArmourPip002;
     public GameObject ArmourPip003;
-    public static int PlayerHealth;
+    public int CurrentHealth;
     public int CurrentArmour;
     public GameObject ArmourDisplay;
     public bool StalwartActive;
@@ -21,15 +20,14 @@ public class HealthMonitor : MonoBehaviour {
     // Use this for initialization
     void Start () {
         StalwartActive = false;
-        PlayerHealth = 100;
-    }
+	}
 	
 	// Update is called once per frame
 	void Update () {
-        
+        CurrentHealth = GlobalHealth.PlayerHealth;
         if (StalwartActive == false)
         {
-            if (PlayerHealth == 80)
+            if (CurrentHealth == 80)
             {
                 if (Health005.transform.localScale.y <= 0.0f)
                 {
@@ -40,7 +38,7 @@ public class HealthMonitor : MonoBehaviour {
                     Health005.transform.localScale -= new Vector3(0.0f, 0.05f, 0.0f);
                 }
             }
-            if (PlayerHealth == 60)
+            if (CurrentHealth == 60)
             {
                 if (Health004.transform.localScale.y <= 0.0f)
                 {
@@ -51,7 +49,7 @@ public class HealthMonitor : MonoBehaviour {
                     Health004.transform.localScale -= new Vector3(0.0f, 0.05f, 0.0f);
                 }
             }
-            if (PlayerHealth == 40)
+            if (CurrentHealth == 40)
             {
                 if (Health003.transform.localScale.y <= 0.0f)
                 {
@@ -62,7 +60,7 @@ public class HealthMonitor : MonoBehaviour {
                     Health003.transform.localScale -= new Vector3(0.0f, 0.05f, 0.0f);
                 }
             }
-            if (PlayerHealth == 20)
+            if (CurrentHealth == 20)
             {
                 if (Health002.transform.localScale.y <= 0.0f)
                 {
@@ -73,7 +71,7 @@ public class HealthMonitor : MonoBehaviour {
                     Health002.transform.localScale -= new Vector3(0.0f, 0.05f, 0.0f);
                 }
             }
-            if (PlayerHealth == 00)
+            if (CurrentHealth == 00)
             {
                 if (Health001.transform.localScale.y <= 0.0f)
                 {
@@ -82,7 +80,6 @@ public class HealthMonitor : MonoBehaviour {
                 else
                 {
                     Health001.transform.localScale -= new Vector3(0.0f, 0.05f, 0.0f);
-                    SceneManager.LoadScene(4);
                 }
             }
         }
