@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyScript : MonoBehaviour {
-    public GlobalZombie globalZombie;
+    //public GlobalZombie globalZombie;
 
     public int EnemyHealth;
     public GameObject TheZombie;
@@ -27,8 +27,8 @@ public class EnemyScript : MonoBehaviour {
         {
             this.GetComponent<ZombieFollow>().enabled = false;
             agent.GetComponent<NavMeshAgent>().speed = 0;
-            TheZombie.GetComponent<Animation>().Play("Dying");
-            StartCoroutine(EndZombie());
+            //TheZombie.GetComponent<Animation>().Play("Dying");
+            //tartCoroutine(EndZombie());
 
         }
 	}
@@ -36,8 +36,8 @@ public class EnemyScript : MonoBehaviour {
     IEnumerator EndZombie()
     {
         yield return new WaitForSeconds(3);
-        globalZombie.ZombieCount -= 1;
-        globalZombie.RoundLimit -= 1;
+        //globalZombie.ZombieCount -= 1;
+        //globalZombie.RoundLimit -= 1;
         Destroy(gameObject);
     }
 

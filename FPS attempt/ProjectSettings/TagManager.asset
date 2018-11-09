@@ -10,6 +10,7 @@ TagManager:
   - PowerUpTrigger
   - ZombieTrigger
   - ZombieSpawnRadius
+  - MaxAmmo
   layers:
   - Default
   - TransparentFX

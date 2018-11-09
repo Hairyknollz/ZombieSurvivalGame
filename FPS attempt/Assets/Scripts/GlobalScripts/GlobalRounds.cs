@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GlobalRounds : MonoBehaviour {
 
     public GameObject RoundCounter;
-    public GlobalZombie globalZombie;
+    //public GlobalZombie globalZombie;
     public int CurrentRound;
     public int CurrentZombiesAlive;
     public int MaxZombiesAtOnce;

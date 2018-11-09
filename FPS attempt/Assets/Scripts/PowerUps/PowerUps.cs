@@ -24,11 +24,24 @@ public class PowerUps : MonoBehaviour {
         if (other.transform.tag == "Stalwart" && healthMonitor.StalwartActive == false)
         {
             PowerUp = "Stalwart";
-            StartCoroutine(PlayAudio());
+            //StartCoroutine(PlayAudio());
             healthMonitor.StalwartActive = true;
             healthMonitor.CurrentArmour = 3;
             Destroy(other.gameObject);
             StartCoroutine(PlayAudio());
+            StartCoroutine(PlayAnim());
+        }
+        if (other.transform.tag == "MaxAmmo")
+        {
+            PowerUp = "MaxAmmo";
+            StartCoroutine(PlayAudio());
+            GlobalAmmo.M9LoadedAmmo = 15;
+            GlobalAmmo.M9ReserveAmmo = 120;
+            GlobalAmmo.MP5KLoadedAmmo = 30;
+            GlobalAmmo.MP5KReserveAmmo = 240;
+            GlobalAmmo.UMP45LoadedAmmo = 25;
+            GlobalAmmo.UMP45ReserveAmmo = 200;
+            Destroy(other.gameObject);
             StartCoroutine(PlayAnim());
         }
     }

@@ -35,7 +35,7 @@ public class ZombieSpawning : MonoBehaviour {
         Vector3 SpawnPosition = new Vector3(PlaceX, 0, PlaceY);
         TheZombie.transform.position = new Vector3(PlaceX, 0, PlaceY);
         Instantiate(TheZombie, SpawnPosition, Quaternion.identity);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(12);
         
     }
 }

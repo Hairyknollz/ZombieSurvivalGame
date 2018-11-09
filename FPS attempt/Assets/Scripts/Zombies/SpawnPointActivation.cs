@@ -51,7 +51,7 @@ public class SpawnPointActivation : MonoBehaviour {
 
     IEnumerator StartSpawnCooldown ()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(12);
         CanSpawnZombie = true;
     }
 }

@@ -64,7 +64,7 @@ public class WeaponSelection : MonoBehaviour {
     {
         if (globalWeapons.PrimaryWeapon2 == "MP5K")
         {
-            DisplayInactiveWeapon1();
+            DisplayInactiveWeapon2();
             globalWeapons.DeactivateWeapons();
             globalWeapons.EquipMP5K();
             activeWeapon = "MP5K";
@@ -72,7 +72,7 @@ public class WeaponSelection : MonoBehaviour {
         }
         else if (globalWeapons.PrimaryWeapon2 == "UMP45")
         {
-            DisplayInactiveWeapon1();
+            DisplayInactiveWeapon2();
             globalWeapons.DeactivateWeapons();
             globalWeapons.EquipUMP45();
             activeWeapon = "UMP45";
@@ -125,6 +125,26 @@ public class WeaponSelection : MonoBehaviour {
         {
             UnactiveWeaponDisplay1.SetActive(true);
             UnactiveWeaponDisplay1Silhouette.GetComponent<RawImage>().texture = M9WeaponSilhouette;
+        }
+    }
+
+    public void DisplayInactiveWeapon2()
+    {
+        inactiveWeapon = activeWeapon;
+        if (inactiveWeapon == "MP5K")
+        {
+            UnactiveWeaponDisplay2.SetActive(true);
+            UnactiveWeaponDisplay2Silhouette.GetComponent<RawImage>().texture = MP5KWeaponSilhouette;
+        }
+        else if (inactiveWeapon == "UMP45")
+        {
+            UnactiveWeaponDisplay2.SetActive(true);
+            UnactiveWeaponDisplay2Silhouette.GetComponent<RawImage>().texture = UMP45WeaponSilhouette;
+        }
+        else if (inactiveWeapon == "M9")
+        {
+            UnactiveWeaponDisplay2.SetActive(true);
+            UnactiveWeaponDisplay2Silhouette.GetComponent<RawImage>().texture = M9WeaponSilhouette;
         }
     }
 }
