@@ -13,6 +13,7 @@ public class GlobalRounds : MonoBehaviour {
     public double ZombiesThisRound;
     public int ZombiesKilled;
     public bool SpawnPointsActive;
+    public int TotalKills;
 
 
     // Use this for initialization
@@ -22,6 +23,7 @@ public class GlobalRounds : MonoBehaviour {
         ZombiesThisRound = 10;
         SpawnPointsActive = false;
         StartNextRound();
+        TotalKills = 0;
 	}
 	
 	// Update is called once per frame
