@@ -38,13 +38,13 @@ public class UMP45GunFire : MonoBehaviour {
         MuzzleFlash.SetActive(true);
         StartCoroutine(MuzzleFlashOff());
         GetComponent<Animation>().Play("UMP45FiringAnim");
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.115f);
         Firing = false;
     }
 
     IEnumerator MuzzleFlashOff()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.115f);
         MuzzleFlash.SetActive(false);
     }
 }

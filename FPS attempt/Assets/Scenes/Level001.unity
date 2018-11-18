@@ -1919,7 +1919,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4048964816147876, guid: 119b087090c7a7a46a85d57a97657454, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.4061143
+      value: 1.19
       objectReference: {fileID: 0}
     - target: {fileID: 4048964816147876, guid: 119b087090c7a7a46a85d57a97657454, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2598,15 +2598,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4640965022586070, guid: 7ae87b27bd725ec4ea1b785d55faa2d5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.1209447
+      value: 1.121
       objectReference: {fileID: 0}
     - target: {fileID: 4640965022586070, guid: 7ae87b27bd725ec4ea1b785d55faa2d5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.2667274
+      value: 1.262
       objectReference: {fileID: 0}
     - target: {fileID: 4640965022586070, guid: 7ae87b27bd725ec4ea1b785d55faa2d5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.3551145
+      value: 1.164
       objectReference: {fileID: 0}
     - target: {fileID: 4640965022586070, guid: 7ae87b27bd725ec4ea1b785d55faa2d5, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2794,6 +2794,48 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 950162303}
   m_CullTransparentMesh: 0
+--- !u!1 &964637780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 964637782}
+  - component: {fileID: 964637781}
+  m_Layer: 0
+  m_Name: PauseGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &964637781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964637780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b4213670c80a0428d6e3937f982f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GamePaused: 0
+  Player: {fileID: 2023393035}
+--- !u!4 &964637782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964637780}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5098987, y: 5.2055492, z: -8.994103}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &999057715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1507281698381602, guid: 1dbbb9cf7e3967f4bb8d3b729d304e29,
@@ -4262,32 +4304,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114110950332755742, guid: caa269d7b5a839b4a911f2e773d58335,
+    - target: {fileID: 114007092184423960, guid: caa269d7b5a839b4a911f2e773d58335,
         type: 2}
       propertyPath: CrossObject
       value: 
       objectReference: {fileID: 1240924008}
-    - target: {fileID: 114881262578883444, guid: caa269d7b5a839b4a911f2e773d58335,
-        type: 2}
-      propertyPath: CrossObject
-      value: 
-      objectReference: {fileID: 1240924008}
-    - target: {fileID: 114825483157708306, guid: caa269d7b5a839b4a911f2e773d58335,
+    - target: {fileID: 114693307174277392, guid: caa269d7b5a839b4a911f2e773d58335,
         type: 2}
       propertyPath: BulletHole
       value: 
       objectReference: {fileID: 1899723177}
-    - target: {fileID: 114825483157708306, guid: caa269d7b5a839b4a911f2e773d58335,
-        type: 2}
-      propertyPath: TheBlood
-      value: 
-      objectReference: {fileID: 295386557}
-    - target: {fileID: 114464264378125066, guid: caa269d7b5a839b4a911f2e773d58335,
-        type: 2}
-      propertyPath: BulletHole
-      value: 
-      objectReference: {fileID: 1899723177}
-    - target: {fileID: 114464264378125066, guid: caa269d7b5a839b4a911f2e773d58335,
+    - target: {fileID: 114693307174277392, guid: caa269d7b5a839b4a911f2e773d58335,
         type: 2}
       propertyPath: TheBlood
       value: 
@@ -4302,29 +4329,36 @@ Prefab:
       propertyPath: PowerUpDisplay
       value: 
       objectReference: {fileID: 368714683}
-    - target: {fileID: 114693307174277392, guid: caa269d7b5a839b4a911f2e773d58335,
+    - target: {fileID: 114464264378125066, guid: caa269d7b5a839b4a911f2e773d58335,
         type: 2}
       propertyPath: BulletHole
       value: 
       objectReference: {fileID: 1899723177}
-    - target: {fileID: 114693307174277392, guid: caa269d7b5a839b4a911f2e773d58335,
+    - target: {fileID: 114464264378125066, guid: caa269d7b5a839b4a911f2e773d58335,
         type: 2}
       propertyPath: TheBlood
       value: 
       objectReference: {fileID: 295386557}
-    - target: {fileID: 114007092184423960, guid: caa269d7b5a839b4a911f2e773d58335,
+    - target: {fileID: 114825483157708306, guid: caa269d7b5a839b4a911f2e773d58335,
+        type: 2}
+      propertyPath: BulletHole
+      value: 
+      objectReference: {fileID: 1899723177}
+    - target: {fileID: 114825483157708306, guid: caa269d7b5a839b4a911f2e773d58335,
+        type: 2}
+      propertyPath: TheBlood
+      value: 
+      objectReference: {fileID: 295386557}
+    - target: {fileID: 114881262578883444, guid: caa269d7b5a839b4a911f2e773d58335,
         type: 2}
       propertyPath: CrossObject
       value: 
       objectReference: {fileID: 1240924008}
-    - target: {fileID: 4421710087006452, guid: caa269d7b5a839b4a911f2e773d58335, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 37
-      objectReference: {fileID: 0}
-    - target: {fileID: 4421710087006452, guid: caa269d7b5a839b4a911f2e773d58335, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 37
-      objectReference: {fileID: 0}
+    - target: {fileID: 114110950332755742, guid: caa269d7b5a839b4a911f2e773d58335,
+        type: 2}
+      propertyPath: CrossObject
+      value: 
+      objectReference: {fileID: 1240924008}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caa269d7b5a839b4a911f2e773d58335, type: 2}
   m_IsPrefabAsset: 0

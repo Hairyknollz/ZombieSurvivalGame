@@ -28,7 +28,7 @@ public class NewBehaviourScript : MonoBehaviour {
         CanSpawnWorm = false;
         SpawnRate = Random.Range(1, 6);
         SpawnPosition = new Vector3(this.transform.position.x, this.transform.position.y, 0);
-        Instantiate(Worm, SpawnPosition, Quaternion.identity);
+        Instantiate(Worm, SpawnPosition, Quaternion.Euler(0,180,0));
         StartCoroutine(StartSpawnCooldown());
     }
 

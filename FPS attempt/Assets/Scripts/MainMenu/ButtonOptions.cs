@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuOptions : MonoBehaviour {
+public class ButtonOptions : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -28,5 +28,20 @@ public class MainMenuOptions : MonoBehaviour {
     public void OptionsScene ()
     {
         SceneManager.LoadScene(5);
+    }
+
+    public void HowToPlayScene()
+    {
+        SceneManager.LoadScene(6);
+    }
+
+    public void HTPToMainMenu()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

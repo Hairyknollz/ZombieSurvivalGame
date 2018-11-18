@@ -18,7 +18,7 @@ public class GlobalScore : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        CurrentScore = 500;
+        CurrentScore = 50000;
         TotalScore = TotalScore + CurrentScore;
     }
 
