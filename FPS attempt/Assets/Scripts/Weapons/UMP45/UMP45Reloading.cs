@@ -47,10 +47,9 @@ public class UMP45Reloading : MonoBehaviour {
                     GlobalAmmo.UMP45ReserveAmmo -= MagSize;
                     ReloadWeapon();
                 }
-
             }
+            StartCoroutine(EnableScripts());
         }
-        StartCoroutine(EnableScripts());
     }
 
     IEnumerator EnableScripts()

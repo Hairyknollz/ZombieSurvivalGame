@@ -11,6 +11,9 @@ TagManager:
   - ZombieTrigger
   - ZombieSpawnRadius
   - MaxAmmo
+  - BarricadeTrigger
+  - ZombieBarricadeTrigger
+  - PlayerBarricadeTrigger
   layers:
   - Default
   - TransparentFX
@@ -26,7 +29,7 @@ TagManager:
   - Door
   - WallBuy
   - SpawnPoint
-  - 
+  - Barricade
   - 
   - 
   - 

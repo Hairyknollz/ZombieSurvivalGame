@@ -16,7 +16,7 @@ public class BulletHoleDecay : MonoBehaviour {
 
     IEnumerator WaitForDeath ()
     {
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(20);
         Destroy(gameObject);
     }
 }

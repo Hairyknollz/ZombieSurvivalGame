@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyLook : MonoBehaviour {
-
-    public GameObject ThePlayer;
+public class InitialiseMouse : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        transform.LookAt(ThePlayer.transform);
+		
 	}
 }

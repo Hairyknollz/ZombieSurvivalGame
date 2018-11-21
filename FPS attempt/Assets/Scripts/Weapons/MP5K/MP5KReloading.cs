@@ -47,10 +47,9 @@ public class MP5KReloading : MonoBehaviour {
                     GlobalAmmo.MP5KReserveAmmo -= MagSize;
                     ReloadWeapon();
                 }
-
             }
+            StartCoroutine(EnableScripts());
         }
-        StartCoroutine(EnableScripts());
     }
 
     IEnumerator EnableScripts()

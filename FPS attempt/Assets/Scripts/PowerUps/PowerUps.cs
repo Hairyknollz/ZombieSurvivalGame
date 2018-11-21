@@ -24,7 +24,6 @@ public class PowerUps : MonoBehaviour {
         if (other.transform.tag == "Stalwart" && healthMonitor.StalwartActive == false)
         {
             PowerUp = "Stalwart";
-            //StartCoroutine(PlayAudio());
             healthMonitor.StalwartActive = true;
             healthMonitor.CurrentArmour = 3;
             Destroy(other.gameObject);

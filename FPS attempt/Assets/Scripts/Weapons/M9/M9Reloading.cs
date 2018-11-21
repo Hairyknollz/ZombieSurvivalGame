@@ -47,10 +47,9 @@ public class M9Reloading : MonoBehaviour {
                     GlobalAmmo.M9ReserveAmmo -= MagSize;
                     ActionReload();
                 }
-
+                StartCoroutine(EnableScripts());
             }
         }
-        StartCoroutine(EnableScripts());
     }
 
     IEnumerator EnableScripts()

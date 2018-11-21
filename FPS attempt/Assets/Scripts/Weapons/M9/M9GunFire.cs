@@ -23,7 +23,6 @@ public class M9GunFire : MonoBehaviour {
                 MuzzleFlash.SetActive(true);
                 StartCoroutine(MuzzleOff());
                 GetComponent<Animation>().Play("M9FiringAnim");
-
                 GlobalAmmo.M9LoadedAmmo -= 1;
             }
         }

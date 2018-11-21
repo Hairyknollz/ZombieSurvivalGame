@@ -10,7 +10,7 @@ public class M9Damage : MonoBehaviour {
     public int AllowedRange;
     public RaycastHit BulletHit;
     public GameObject BulletHole;
-    public GameObject TheBlood;
+    public GameObject BloodParticles;
 
 	// Use this for initialization
 	void Start () {
@@ -35,12 +35,12 @@ public class M9Damage : MonoBehaviour {
                         {
                             if (BulletHit.transform.tag == "Zombie")
                             {
-                                Instantiate(TheBlood, BulletHit.point, Quaternion.FromToRotation(Vector3.up, BulletHit.normal));
+                                Instantiate(BloodParticles, BulletHit.point, Quaternion.FromToRotation(Vector3.up, BulletHit.normal));
                             }
                             if (BulletHit.collider.tag == "ZombieHead")
                             {
                                 GunDamage = GunDamage * 2;
-                                Instantiate(TheBlood, BulletHit.point, Quaternion.FromToRotation(Vector3.up, BulletHit.normal));
+                                Instantiate(BloodParticles, BulletHit.point, Quaternion.FromToRotation(Vector3.up, BulletHit.normal));
                             }
                             if (BulletHit.transform.tag == "Untagged")
                             {

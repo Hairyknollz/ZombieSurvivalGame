@@ -23,5 +23,5 @@ public class GlobalHealth : MonoBehaviour {
             SceneManager.LoadScene(4);
         }
 
-	}
+    }
 }
