@@ -11,6 +11,7 @@ public class OpenDoubleDoors : MonoBehaviour
     public float TheDistance;
 
     // Use this for initialization
+    // Use this for initialization
     void Start()
     {
         TheDistance = PlayerCasting.DistanceFromTarget;
@@ -47,7 +48,7 @@ public class OpenDoubleDoors : MonoBehaviour
     {
         TheDoorRight.GetComponent<Animation>().Play("Door002RightAnim");
         TheDoorLeft.GetComponent<Animation>().Play("Door002LeftAnim");
-        this.GetComponent<BoxCollider>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
         yield return new WaitForSeconds(1);
         TheDoorRight.GetComponent<Animation>().Stop("Door002RightAnim");
         TheDoorLeft.GetComponent<Animation>().Stop("Door002LeftAnim");

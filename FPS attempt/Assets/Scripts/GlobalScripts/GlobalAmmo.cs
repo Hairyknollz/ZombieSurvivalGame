@@ -31,6 +31,14 @@ public class GlobalAmmo : MonoBehaviour {
     public int InternalM9LoadedAmmo;
     public GameObject M9LoadedAmmoDisplay;
 
+    public static int RevolverReserveAmmo;
+    public int InternalRevolverReserveAmmo;
+    public GameObject RevolverReserveAmmoDisplay;
+
+    public static int RevolverLoadedAmmo;
+    public int InternalRevolverLoadedAmmo;
+    public GameObject RevolverLoadedAmmoDisplay;
+
 
 
     // Use this for initialization
@@ -41,6 +49,8 @@ public class GlobalAmmo : MonoBehaviour {
         UMP45LoadedAmmo = 0;
         M9ReserveAmmo = 30;
         M9LoadedAmmo = 15;
+        RevolverReserveAmmo = 0;
+        RevolverLoadedAmmo = 0;
     }
 
     // Update is called once per frame
@@ -52,6 +62,8 @@ public class GlobalAmmo : MonoBehaviour {
         InternalUMP45ReserveAmmo = UMP45ReserveAmmo;
         InternalM9LoadedAmmo = M9LoadedAmmo;
         InternalM9ReserveAmmo = M9ReserveAmmo;
+        InternalRevolverLoadedAmmo = RevolverLoadedAmmo;
+        InternalRevolverReserveAmmo = RevolverReserveAmmo;
 
         DisplayAmmoCounters();
     }
@@ -72,6 +84,11 @@ public class GlobalAmmo : MonoBehaviour {
         {
             M9ReserveAmmoDisplay.GetComponent<Text>().text = "" + M9ReserveAmmo;
             M9LoadedAmmoDisplay.GetComponent<Text>().text = "" + M9LoadedAmmo;
+        }
+        else if (weaponSelection.activeWeapon == "Revolver")
+        {
+            RevolverReserveAmmoDisplay.GetComponent<Text>().text = "" + RevolverReserveAmmo;
+            RevolverLoadedAmmoDisplay.GetComponent<Text>().text = "" + RevolverLoadedAmmo;
         }
     }
 

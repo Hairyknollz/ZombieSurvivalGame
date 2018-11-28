@@ -9,6 +9,7 @@ public class GlobalADS : MonoBehaviour {
     public GameObject M9;
     public GameObject MP5K;
     public GameObject UMP45;
+    public GameObject Revolver;
     public GameObject Crosshair;
 
 	// Use this for initialization
@@ -56,12 +57,25 @@ public class GlobalADS : MonoBehaviour {
                 Crosshair.SetActive(true);
             }
         }
+        else if (weaponSelection.activeWeapon == "Revolver")
+        {
+            if (Input.GetButtonDown("AimDownSights"))
+            {
+                StartCoroutine(StartRevolverADS());
+                Crosshair.SetActive(false);
+            }
+            else if (Input.GetButtonUp("AimDownSights"))
+            {
+                StartCoroutine(EndRevolverADS());
+                Crosshair.SetActive(true);
+            }
+        }
         //if (Input.GetButtonUp("AimDownSights"))
         //{
         //    StartCoroutine(EndADS());
         //    Crosshair.SetActive(true);
         //}
-	}
+    }
 
     IEnumerator StartM9ADS ()
     {
@@ -98,5 +112,17 @@ public class GlobalADS : MonoBehaviour {
         UMP45.GetComponent<Animation>().Play("UMP45ADSStopAnim");
         yield return new WaitForSeconds(1);
         UMP45.GetComponent<Animation>().Stop("UMP45ADSStopAnim");
+    }
+    IEnumerator StartRevolverADS()
+    {
+        Revolver.GetComponent<Animation>().Play("M9ADSAnim");
+        yield return new WaitForSeconds(0.4f);
+        Revolver.GetComponent<Animation>().Stop("M9ADSAnim");
+    }
+    IEnumerator EndRevolverADS()
+    {
+        Revolver.GetComponent<Animation>().Play("M9ADSStopAnim");
+        yield return new WaitForSeconds(0.4f);
+        Revolver.GetComponent<Animation>().Stop("M9ADSStopAnim");
     }
 }

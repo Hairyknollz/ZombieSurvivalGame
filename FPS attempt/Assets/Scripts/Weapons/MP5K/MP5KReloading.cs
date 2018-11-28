@@ -54,7 +54,7 @@ public class MP5KReloading : MonoBehaviour {
 
     IEnumerator EnableScripts()
     {
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(1.42f);
         GetComponent<MP5KGunFire>().enabled = true;
         CrossObject.SetActive(true);
         MechanicsObject.SetActive(true);

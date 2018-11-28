@@ -6,6 +6,10 @@ public class InitialiseMouse : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        if (PlayerPrefs.GetInt("p_fov") < 60)
+        {
+            PlayerPrefs.SetInt("p_fov", 60);
+        }
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }

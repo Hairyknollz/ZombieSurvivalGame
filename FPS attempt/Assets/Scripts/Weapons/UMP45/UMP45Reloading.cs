@@ -54,7 +54,7 @@ public class UMP45Reloading : MonoBehaviour {
 
     IEnumerator EnableScripts()
     {
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(1.42f);
         GetComponent<UMP45GunFire>().enabled = true;
         CrossObject.SetActive(true);
         MechanicsObject.SetActive(true);

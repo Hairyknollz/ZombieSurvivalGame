@@ -33,7 +33,7 @@ public class PowerUps : MonoBehaviour {
         if (other.transform.tag == "MaxAmmo")
         {
             PowerUp = "MaxAmmo";
-            StartCoroutine(PlayAudio());
+            //StartCoroutine(PlayAudio());
             GlobalAmmo.M9LoadedAmmo = 15;
             GlobalAmmo.M9ReserveAmmo = 120;
             GlobalAmmo.MP5KLoadedAmmo = 30;
@@ -41,7 +41,7 @@ public class PowerUps : MonoBehaviour {
             GlobalAmmo.UMP45LoadedAmmo = 25;
             GlobalAmmo.UMP45ReserveAmmo = 200;
             Destroy(other.gameObject);
-            StartCoroutine(PlayAnim());
+            //StartCoroutine(PlayAnim());
         }
     }
 

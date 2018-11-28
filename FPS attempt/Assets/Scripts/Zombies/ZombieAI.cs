@@ -24,19 +24,21 @@ public class ZombieAI : MonoBehaviour
     {
         CanAttack = false;
         IsAttacking = false;
+        agent.GetComponent<NavMeshAgent>().speed = 1.5f;
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.LookAt(ThePlayer.transform);            
-        agent.GetComponent<NavMeshAgent>().speed = 1;
+        //agent.GetComponent<NavMeshAgent>().speed = 1.35f;
         if (CanAttack == false)
         {
             //TheZombie.GetComponent<Animation>().Play("walk");
             agent.SetDestination(ThePlayer.transform.position);
+            agent.GetComponent<NavMeshAgent>().speed = 1.5f;
         }
-        
+
         if (CanAttack == true)
         {
             if (IsAttacking == false)

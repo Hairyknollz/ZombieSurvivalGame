@@ -8,8 +8,6 @@ public class MP5KDamage : MonoBehaviour {
 
     public int GunDamage;
     public int BaseGunDamage;
-    public float TargetDistance;
-    public int AllowedRange;
     public RaycastHit BulletHit;
     public GameObject BulletHole;
     public GameObject BloodParticles;
@@ -18,7 +16,6 @@ public class MP5KDamage : MonoBehaviour {
     void Start () {
         BaseGunDamage = 25;
         GunDamage = BaseGunDamage;
-        AllowedRange = 15;
 	}
 	
 	// Update is called once per frame
@@ -33,9 +30,6 @@ public class MP5KDamage : MonoBehaviour {
             RaycastHit Shot;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Shot))
             {
-                TargetDistance = Shot.distance;
-                if (TargetDistance <= AllowedRange)
-                {
                     if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out BulletHit))
                     {
                         if (BulletHit.transform.tag == "Zombie")
@@ -57,7 +51,6 @@ public class MP5KDamage : MonoBehaviour {
                     {
                         GunDamage = GunDamage / 2;
                     }
-                }
             }
         }
     }

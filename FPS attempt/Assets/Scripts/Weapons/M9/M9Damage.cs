@@ -6,8 +6,6 @@ public class M9Damage : MonoBehaviour {
 
     public int GunDamage;
     public int BaseGunDamage;
-    public float TargetDistance;
-    public int AllowedRange;
     public RaycastHit BulletHit;
     public GameObject BulletHole;
     public GameObject BloodParticles;
@@ -16,7 +14,6 @@ public class M9Damage : MonoBehaviour {
 	void Start () {
         BaseGunDamage = 20;
         GunDamage = BaseGunDamage;
-        AllowedRange = 15;
 	}
 	
 	// Update is called once per frame
@@ -28,9 +25,6 @@ public class M9Damage : MonoBehaviour {
                 RaycastHit Shot;
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Shot))
                 {
-                    TargetDistance = Shot.distance;
-                    if (TargetDistance <= AllowedRange)
-                    {
                         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out BulletHit))
                         {
                             if (BulletHit.transform.tag == "Zombie")
@@ -52,7 +46,6 @@ public class M9Damage : MonoBehaviour {
                         {
                             GunDamage = GunDamage / 2;
                         }
-                    }
                 }
             }
         }

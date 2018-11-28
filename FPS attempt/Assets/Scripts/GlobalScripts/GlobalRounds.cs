@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GlobalRounds : MonoBehaviour {
 
+    public GameObject RoundNumber;
     public GameObject RoundCounter;
     //public GlobalZombie globalZombie;
     public int CurrentRound;
@@ -24,10 +25,12 @@ public class GlobalRounds : MonoBehaviour {
         SpawnPointsActive = false;
         StartNextRound();
         TotalKills = 0;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        RoundCounter.GetComponent<Animation>().Play("RoundCounterAnim");
+
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (CurrentZombiesAlive != MaxZombiesAtOnce && CurrentZombiesAlive != ZombiesThisRound)
         {
             SpawnPointsActive = true;
@@ -41,7 +44,7 @@ public class GlobalRounds : MonoBehaviour {
             CurrentRound += 1;
             ZombiesThisRound = ZombiesThisRound + 8;
             ZombiesKilled = 0;
-            RoundCounter.GetComponent<Text>().text = "" + CurrentRound;
+            RoundNumber.GetComponent<Text>().text = "" + CurrentRound;
             //StartNextRound();
         }
         

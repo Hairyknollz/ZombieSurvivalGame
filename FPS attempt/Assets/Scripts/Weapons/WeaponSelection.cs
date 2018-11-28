@@ -89,6 +89,14 @@ public class WeaponSelection : MonoBehaviour {
             activeWeapon = "M9";
             DisplayActiveWeapon();
         }
+        else if (globalWeapons.SecondaryWeapon == "Revolver")
+        {
+            DisplayInactiveWeapon1();
+            globalWeapons.DeactivateWeapons();
+            globalWeapons.EquipRevolver();
+            activeWeapon = "Revolver";
+            DisplayActiveWeapon();
+        }
     }
 
     public void DisplayActiveWeapon ()
@@ -105,6 +113,10 @@ public class WeaponSelection : MonoBehaviour {
         else if (activeWeapon == "UMP45")
         {
             ActiveWeaponSilhouette.GetComponent<RawImage>().texture = UMP45WeaponSilhouette;
+        }
+        else if (activeWeapon == "Revolver")
+        {
+            ActiveWeaponSilhouette.GetComponent<RawImage>().texture = M9WeaponSilhouette;
         }
     }
 
@@ -126,6 +138,11 @@ public class WeaponSelection : MonoBehaviour {
             UnactiveWeaponDisplay1.SetActive(true);
             UnactiveWeaponDisplay1Silhouette.GetComponent<RawImage>().texture = M9WeaponSilhouette;
         }
+        else if (inactiveWeapon == "Revolver")
+        {
+            UnactiveWeaponDisplay1.SetActive(true);
+            UnactiveWeaponDisplay1Silhouette.GetComponent<RawImage>().texture = M9WeaponSilhouette;
+        }
     }
 
     public void DisplayInactiveWeapon2()
@@ -142,6 +159,11 @@ public class WeaponSelection : MonoBehaviour {
             UnactiveWeaponDisplay2Silhouette.GetComponent<RawImage>().texture = UMP45WeaponSilhouette;
         }
         else if (inactiveWeapon == "M9")
+        {
+            UnactiveWeaponDisplay2.SetActive(true);
+            UnactiveWeaponDisplay2Silhouette.GetComponent<RawImage>().texture = M9WeaponSilhouette;
+        }
+        else if (inactiveWeapon == "Revolver")
         {
             UnactiveWeaponDisplay2.SetActive(true);
             UnactiveWeaponDisplay2Silhouette.GetComponent<RawImage>().texture = M9WeaponSilhouette;

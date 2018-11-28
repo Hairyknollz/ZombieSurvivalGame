@@ -13,6 +13,8 @@ public class GlobalWeapons : MonoBehaviour {
     public GameObject UMP45;
     public GameObject M9Mechanics;
     public GameObject M9;
+    public GameObject RevolverMechanics;
+    public GameObject Revolver;
     public string SecondaryWeapon;
     public string PrimaryWeapon1;
     public string PrimaryWeapon2;
@@ -94,6 +96,8 @@ public class GlobalWeapons : MonoBehaviour {
     {
         M9.SetActive(false);
         M9Mechanics.SetActive(false);
+        Revolver.SetActive(false);
+        RevolverMechanics.SetActive(false);
         MP5K.SetActive(false);
         MP5KMechanics.SetActive(false);
         UMP45.SetActive(false);
@@ -116,5 +120,11 @@ public class GlobalWeapons : MonoBehaviour {
     {
         UMP45.SetActive(true);
         UMP45Mechanics.SetActive(true);
+    }
+
+    public void EquipRevolver()
+    {
+        Revolver.SetActive(true);
+        RevolverMechanics.SetActive(true);
     }
 }
